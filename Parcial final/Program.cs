@@ -91,5 +91,18 @@ public class Program
                 break;
         }
     }
+    static void MovePlayer(int dRow, int dCol)
+    {
+        int newRow = playerRow + dRow;
+        int newCol = playerCol + dCol;
+        if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size)
+        {
+            score += board[newRow, newCol];
+            playerRow = newRow;
+            playerCol = newCol;
+            board[newRow, newCol] = 0;
+        }
+    }
+}
 
 
