@@ -49,7 +49,7 @@ public class Program
                 if (i == playerRow && j == playerCol)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("[P] ");
+                    Console.Write(score);
                     Console.ResetColor();
                 }
                 else
