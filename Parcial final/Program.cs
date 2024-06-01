@@ -60,3 +60,36 @@ public class Program
             Console.WriteLine();
         }
     }
+
+    static void DisplayScore()
+    {
+        Console.WriteLine($"Puntaje: {score}");
+    }
+
+    static void HandleKey(ConsoleKey key)
+    {
+        switch (key)
+        {
+            case ConsoleKey.UpArrow:
+            case ConsoleKey.W:
+                MovePlayer(-1, 0);
+                break;
+            case ConsoleKey.DownArrow:
+            case ConsoleKey.S:
+                MovePlayer(1, 0);
+                break;
+            case ConsoleKey.LeftArrow:
+            case ConsoleKey.A:
+                MovePlayer(0, -1);
+                break;
+            case ConsoleKey.RightArrow:
+            case ConsoleKey.D:
+                MovePlayer(0, 1);
+                break;
+            case ConsoleKey.Escape:
+                Environment.Exit(0);
+                break;
+        }
+    }
+
+
